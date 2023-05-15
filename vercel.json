@@ -19,7 +19,7 @@
     },
     {
       "src":"./tests/**",
-      "use":"@vercel/static"
+      "use":"@vercel/node"
     },
     {
       "src":"./public/**",
