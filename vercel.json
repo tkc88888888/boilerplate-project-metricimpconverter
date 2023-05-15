@@ -6,6 +6,10 @@
       "use":"@vercel/node"
     },
     {
+      "src":"./test-runner.js",
+      "use":"@vercel/node"
+    },
+    {
       "src":"./views/**",
       "use":"@vercel/static"
     },
