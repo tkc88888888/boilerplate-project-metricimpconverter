@@ -10,6 +10,18 @@
       "use":"@vercel/static"
     },
     {
+      "src":"./controllers/**",
+      "use":"@vercel/node"
+    },
+    {
+      "src":"./routes/**",
+      "use":"@vercel/node"
+    },
+    {
+      "src":"./tests/**",
+      "use":"@vercel/static"
+    },
+    {
       "src":"./public/**",
       "use":"@vercel/static"
     }
@@ -20,8 +32,24 @@
       "dest":"./server.js"
     },
     {
+      "src":"/(.*)",
+      "dest":"./test-runner.js"
+    },
+    {
       "src":"/",
-      "dest":"./views/index.html"
+      "dest":"./controllers/convertHandler.js"
+    },
+    {
+      "src": "/(.+)",
+      "dest": "routes/$1"
+    },
+    {
+      "src": "/(.+)",
+      "dest": "routes/$1"
+    },
+    {
+      "src": "/(.+)",
+      "dest": "tests/$1"
     },
     {
       "src": "/(.+)",
