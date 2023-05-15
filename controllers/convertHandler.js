@@ -35,6 +35,8 @@ function ConvertHandler() {
 
     if (!parseFloat(result) || isNaN(result)) {
       result = "invalid number";
+    } else {
+      result = parseFloat(result);
     }
     return result;
   };
