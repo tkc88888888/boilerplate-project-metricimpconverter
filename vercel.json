@@ -10,6 +10,10 @@
       "use":"@vercel/node"
     },
     {
+      "src":"./assertion-analyser.js",
+      "use":"@vercel/node"
+    },
+    {
       "src":"./controllers/convertHandler.js",
       "use":"@vercel/node"
     },
@@ -40,15 +44,19 @@
       "dest":"./test-runner.js"
     },
     {
-      "src":"/",
+      "src":"/(.*)",
+      "dest":"./assertion-analyser.js"
+    },
+    {
+      "src":"/(.*)",
       "dest":"./controllers/convertHandler.js"
     },
     {
-      "src": "/(.+)",
+      "src": "/(.*)",
       "dest": "routes/$1"
     },
     {
-      "src": "/(.+)",
+      "src": "/(.*)",
       "dest": "tests/$1"
     },
     {
