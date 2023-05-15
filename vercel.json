@@ -10,11 +10,7 @@
       "use":"@vercel/node"
     },
     {
-      "src":"./views/**",
-      "use":"@vercel/static"
-    },
-    {
-      "src":"./controllers/**",
+      "src":"./controllers/convertHandler.js",
       "use":"@vercel/node"
     },
     {
@@ -24,6 +20,10 @@
     {
       "src":"./tests/**",
       "use":"@vercel/node"
+    },
+    {
+      "src":"./views/index.html",
+      "use":"@vercel/static"
     },
     {
       "src":"./public/**",
@@ -49,11 +49,11 @@
     },
     {
       "src": "/(.+)",
-      "dest": "routes/$1"
+      "dest": "tests/$1"
     },
     {
-      "src": "/(.+)",
-      "dest": "tests/$1"
+      "src": "/",
+      "dest": "./views/index.html"
     },
     {
       "src": "/(.+)",
